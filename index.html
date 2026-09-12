@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>英検準2級プラス 単語4択問題集</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#5c2d7a">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Old+Mincho:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+  :root {
+    --paper:       #f3f1f5;
+    --paper-edge:  #e6e2ea;
+    --card:        #ffffff;
+    --ink:         #1f1a24;
+    --ink-soft:    #544b5c;
+    --ink-faint:   #857b8e;
+    --line:        #d6d0dc;
+    --line-strong: #1f1a24;
+    --accent:      #5c2d7a;
+    --accent-soft: #efe6f5;
+    --on-accent:   #ffffff;
+    --maru:        #c6392e;
+    --maru-soft:   #fbebe8;
+    --batsu:       #2b4f9e;
+    --batsu-soft:  #e8edf8;
+    --pre-bg:      #f7f5f9;
+    --shadow: 0 1px 2px rgba(31,26,36,.06), 0 16px 36px -18px rgba(31,26,36,.28);
+    --sans: "BIZ UDPGothic","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic","Meiryo",system-ui,sans-serif;
+    --serif: "Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho","YuMincho","MS PMincho",serif;
+    --latin: "Lora","Georgia","Times New Roman","Hiragino Mincho ProN","Yu Mincho",serif;
+    --mono: "BIZ UDGothic","MS Gothic","Osaka-Mono",ui-monospace,Menlo,monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:       #14101a;
+      --paper-edge:  #0d0a11;
+      --card:        #1e1826;
+      --ink:         #ebe6f0;
+      --ink-soft:    #aea4b8;
+      --ink-faint:   #766c80;
+      --line:        #332a3d;
+      --line-strong: #ebe6f0;
+      --accent:      #c59ae0;
+      --accent-soft: #2c1d38;
+      --on-accent:   #14101a;
+      --maru:        #f0685a;
+      --maru-soft:   #3a1f1c;
+      --batsu:       #85a3ea;
+      --batsu-soft:  #1c2740;
+      --pre-bg:      #17121d;
+      --shadow: 0 1px 2px rgba(0,0,0,.5), 0 20px 44px -20px rgba(0,0,0,.8);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:       #14101a;
+    --paper-edge:  #0d0a11;
+    --card:        #1e1826;
+    --ink:         #ebe6f0;
+    --ink-soft:    #aea4b8;
+    --ink-faint:   #766c80;
+    --line:        #332a3d;
+    --line-strong: #ebe6f0;
+    --accent:      #c59ae0;
+    --accent-soft: #2c1d38;
+    --on-accent:   #14101a;
+    --maru:        #f0685a;
+    --maru-soft:   #3a1f1c;
+    --batsu:       #85a3ea;
+    --batsu-soft:  #1c2740;
+    --pre-bg:      #17121d;
+    --shadow: 0 1px 2px rgba(0,0,0,.5), 0 20px 44px -20px rgba(0,0,0,.8);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    padding: clamp(.9rem, 3vw, 2.5rem) clamp(.8rem, 3vw, 2rem) 4rem;
+    background: radial-gradient(120% 80% at 50% 0%, var(--paper) 0%, var(--paper-edge) 100%);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+  }
+  .shell {
+    width: 100%;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(.9rem, 2.5vw, 1.4rem);
+  }
+  button { font: inherit; color: inherit; }
+  button:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+  /* ---------- masthead ---------- */
+  .mast {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: .8rem;
+    align-items: center;
+    padding-bottom: .6rem;
+    border-bottom: 3px double var(--line-strong);
+  }
+  .mast__plate {
+    grid-row: 1 / span 2;
+    align-self: center;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: .95rem;
+    letter-spacing: .12em;
+    line-height: 1;
+    padding: .55rem .45rem .5rem .55rem;
+    border-radius: 4px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    white-space: nowrap;
+  }
+  .mast__title {
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(1.15rem, 4.2vw, 1.45rem);
+    letter-spacing: .06em;
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+  .mast__sub {
+    margin: .1rem 0 0;
+    font-size: .78rem;
+    letter-spacing: .08em;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---------- card ---------- */
+  .card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--accent);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    padding: clamp(1.1rem, 4vw, 1.8rem);
+  }
+  .eyebrow {
+    margin: 0 0 .2rem;
+    font-size: .74rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+    min-height: 3rem;
+    padding: .6rem 1.4rem;
+    border-radius: 4px;
+    border: 1px solid var(--line-strong);
+    background: transparent;
+    cursor: pointer;
+    letter-spacing: .06em;
+    font-weight: 700;
+    transition: transform .08s ease, background .15s ease;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn--primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+    width: 100%;
+  }
+  .btn--ghost { width: 100%; }
+
+  /* ---------- start ---------- */
+  .start__count {
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: .3rem;
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+  .start__count .unit { font-size: 1.1rem; letter-spacing: .1em; color: var(--ink-soft); }
+  .start__count .range { font-family: var(--sans); font-weight: 400; font-size: .82rem; color: var(--ink-faint); margin-left: .4rem; }
+  .cats {
+    list-style: none;
+    margin: .9rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    row-gap: 0;
+    border-top: 1px solid var(--line);
+  }
+  .cats li { display: contents; }
+  .cats span {
+    padding: .38rem 0;
+    border-bottom: 1px solid var(--line);
+    font-size: .92rem;
+  }
+  .cats span:last-child { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-soft); padding-left: 1rem; }
+  .start__rule {
+    margin: 1rem 0 0;
+    padding: .8rem .95rem;
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 4px 4px 0;
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+  .start__rule strong { color: var(--accent); }
+  .start__last {
+    margin: .9rem 0 0;
+    font-size: .86rem;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+  .start__note {
+    margin: .9rem 0 1.2rem;
+    font-size: .82rem;
+    line-height: 1.7;
+    color: var(--ink-faint);
+  }
+
+  /* ---------- progress ---------- */
+  .progress {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 4px;
+  }
+  .progress span {
+    display: block;
+    height: 7px;
+    border-radius: 2px;
+    background: var(--line);
+  }
+  .progress span.is-now { background: var(--accent); }
+  .progress span.is-ok  { background: var(--maru); }
+  .progress span.is-ng  { background: var(--batsu); }
+
+  /* ---------- question ---------- */
+  .qmeta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .4rem .6rem;
+    margin-bottom: .8rem;
+    font-size: .78rem;
+    color: var(--ink-faint);
+  }
+  .qmeta__num {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--ink);
+    letter-spacing: .06em;
+    margin-right: .2rem;
+  }
+  .chip {
+    display: inline-block;
+    padding: .05rem .55rem;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 999px;
+    font-size: .74rem;
+    letter-spacing: .04em;
+    white-space: nowrap;
+  }
+  .qinst {
+    margin: 0 0 .6rem;
+    font-size: .8rem;
+    color: var(--ink-soft);
+  }
+  .qtext {
+    margin: 0;
+    white-space: pre-line;
+    font-family: var(--latin);
+    font-size: 1.08rem;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+  }
+  .choices {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .55rem;
+  }
+  @media (max-width: 420px) { .choices { grid-template-columns: 1fr; } }
+  .choice {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2.5rem 1fr auto;
+    align-items: stretch;
+    text-align: left;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--card);
+    cursor: pointer;
+    line-height: 1.65;
+    overflow: hidden;
+    transition: border-color .15s ease, background .15s ease, opacity .2s ease;
+  }
+  .choice__n {
+    display: grid;
+    place-items: center;
+    border-right: 1px solid var(--line);
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    background: var(--pre-bg);
+  }
+  .choice__t {
+    padding: .6rem .75rem;
+    font-family: var(--latin);
+    font-size: 1.02rem;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+  }
+  .choice__m {
+    display: grid;
+    place-items: center;
+    width: 0;
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: width .15s ease;
+  }
+  @media (hover: hover) {
+    .choice:not([disabled]):hover { border-color: var(--accent); background: var(--accent-soft); }
+  }
+  .choice[disabled] { cursor: default; }
+  .choice.is-dim { opacity: .5; }
+  .choice.is-correct { border-color: var(--maru); background: var(--maru-soft); }
+  .choice.is-correct .choice__n { color: var(--maru); border-right-color: var(--maru); background: transparent; }
+  .choice.is-correct .choice__m { width: 2.4rem; color: var(--maru); }
+  .choice.is-wrong { border-color: var(--batsu); background: var(--batsu-soft); }
+  .choice.is-wrong .choice__n { color: var(--batsu); border-right-color: var(--batsu); background: transparent; }
+  .choice.is-wrong .choice__m { width: 2.4rem; color: var(--batsu); }
+
+  /* ---------- verdict ---------- */
+  .verdict {
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--line);
+  }
+  .verdict__head {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: .08em;
+  }
+  .verdict__mark { font-size: 2rem; line-height: 1; }
+  .verdict.is-ok .verdict__mark, .verdict.is-ok .verdict__word { color: var(--maru); }
+  .verdict.is-ng .verdict__mark, .verdict.is-ng .verdict__word { color: var(--batsu); }
+  .verdict__ans {
+    margin-left: auto;
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: .88rem;
+    letter-spacing: .04em;
+    color: var(--ink-soft);
+  }
+  .verdict__exp {
+    margin: .8rem 0 0;
+    padding: .85rem 1rem;
+    background: var(--pre-bg);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font-size: .93rem;
+    line-height: 1.8;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+  }
+  .verdict__exp::before {
+    content: "解説";
+    display: block;
+    font-size: .72rem;
+    letter-spacing: .2em;
+    color: var(--accent);
+    margin-bottom: .2rem;
+  }
+  .verdict .btn { margin-top: 1rem; }
+
+  /* ---------- result ---------- */
+  .score {
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    gap: .25rem;
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .score .unit { font-size: 1.3rem; letter-spacing: .1em; }
+  .score .of { font-family: var(--sans); font-weight: 400; font-size: .85rem; color: var(--ink-faint); margin-left: .4rem; }
+  .score__sub { margin: .5rem 0 0; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  .stamp {
+    position: absolute;
+    top: 1.1rem;
+    right: 1.1rem;
+    width: 5.2rem;
+    height: 5.2rem;
+    display: grid;
+    place-items: center;
+    border: 3px solid var(--maru);
+    border-radius: 50%;
+    color: var(--maru);
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: .1em;
+    line-height: 1.15;
+    text-align: center;
+    transform: rotate(-9deg);
+    opacity: .92;
+    mix-blend-mode: multiply;
+  }
+  .stamp.is-ng { border-color: var(--batsu); color: var(--batsu); }
+  :root[data-theme="dark"] .stamp { mix-blend-mode: normal; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .stamp { mix-blend-mode: normal; } }
+  .stamp small { display: block; font-size: .62rem; letter-spacing: .05em; font-family: var(--sans); font-weight: 400; }
+  .result__line {
+    margin: 1rem 0 0;
+    padding: .7rem .9rem;
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 4px 4px 0;
+    font-size: .88rem;
+    line-height: 1.7;
+  }
+  .cattable {
+    width: 100%;
+    margin: 1.2rem 0 0;
+    border-collapse: collapse;
+    font-size: .9rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .cattable th, .cattable td {
+    padding: .4rem .2rem;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+  }
+  .cattable th { font-weight: 400; color: var(--ink-faint); font-size: .74rem; letter-spacing: .1em; border-bottom-color: var(--line-strong); }
+  .cattable td:nth-child(n+2), .cattable th:nth-child(n+2) { text-align: right; white-space: nowrap; }
+  .cattable .bar { display: inline-block; height: 8px; width: 4.5rem; background: var(--line); border-radius: 2px; vertical-align: middle; margin-left: .5rem; overflow: hidden; }
+  .cattable .bar i { display: block; height: 100%; background: var(--accent); }
+
+  .words { list-style: none; margin: 1.2rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+  .words li {
+    padding: .15rem .6rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-family: var(--latin);
+    font-size: .92rem;
+  }
+  .words li.ng { border-color: var(--batsu); color: var(--batsu); background: var(--batsu-soft); }
+
+  .review { list-style: none; margin: 1.4rem 0 0; padding: 0; border-top: 1px solid var(--line-strong); }
+  .review > li { border-bottom: 1px solid var(--line); }
+  .review summary {
+    display: grid;
+    grid-template-columns: 1.6rem 1.6rem 1fr;
+    gap: .4rem;
+    align-items: baseline;
+    padding: .6rem .1rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: .9rem;
+  }
+  .review summary::-webkit-details-marker { display: none; }
+  .review .r__n { color: var(--ink-faint); font-variant-numeric: tabular-nums; font-size: .8rem; }
+  .review .r__m { font-family: var(--serif); font-weight: 700; font-size: 1.1rem; }
+  .review .r__m.ok { color: var(--maru); }
+  .review .r__m.ng { color: var(--batsu); }
+  .review .r__t { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: var(--latin); }
+  .review .r__t small { display: block; color: var(--ink-faint); font-size: .74rem; font-family: var(--sans); }
+  .review details[open] .r__t { white-space: normal; }
+  .review .r__body { padding: 0 .1rem 1rem; font-size: .88rem; line-height: 1.75; }
+  .review .r__body p { margin: .4rem 0; white-space: pre-line; overflow-wrap: anywhere; }
+  .review .r__body p.en { font-family: var(--latin); font-size: .95rem; }
+  .review .r__body .lab { font-size: .72rem; letter-spacing: .18em; color: var(--accent); margin: .6rem 0 0; }
+  .review .r__body .yours { color: var(--batsu); }
+  .review .r__body .right { color: var(--maru); }
+  .result .btn { margin-top: 1.4rem; }
+
+  .foot {
+    font-size: .74rem;
+    line-height: 1.7;
+    color: var(--ink-faint);
+    padding-top: .4rem;
+    border-top: 1px solid var(--line);
+  }
+  .foot p { margin: .2rem 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="mast">
+    <span class="mast__plate" aria-hidden="true">英検</span>
+    <h1 class="mast__title">準2級プラス 単語4択問題集</h1>
+    <p class="mast__sub">大問1形式｜10問ランダム・100点満点</p>
+  </header>
+
+  <section id="start" class="card">
+    <p class="eyebrow">収録問題</p>
+    <p class="start__count"><span id="poolCount">0</span><span class="unit">問</span><span class="range">短文の語句空所補充（大問1）形式のオリジナル問題</span></p>
+    <ul class="cats" id="catList"></ul>
+    <p class="start__rule">1回に<strong>10問</strong>をランダム出題、1問10点で採点します。本番の大問1は17問（単語10問＋熟語7問）で、英文の空所に入る語を4つから選ぶ形式です。英検はCSEスコアで合否が決まるので単純な正答率の基準はありませんが、目安として<strong>70点以上を合格圏</strong>と判定します。1問ごとに正解・訳・解説を表示してから次へ進みます。</p>
+    <p class="start__last" id="lastScore" hidden></p>
+    <p class="start__note">まだ出題していない問題を優先して選ぶので、繰り返すと収録問題を一巡できます（この端末のブラウザに記録）。収録データは <span id="buildDate"></span> 版です。</p>
+    <button id="btnStart" class="btn btn--primary" type="button">10問に挑戦する</button>
+  </section>
+
+  <section id="quiz" hidden>
+    <div class="shell" style="gap:.7rem">
+      <div class="progress" id="progress" aria-hidden="true"></div>
+      <article class="card">
+        <div class="qmeta">
+          <span class="qmeta__num" id="qNum">第1問</span>
+          <span class="chip" id="qCat"></span>
+          <span id="qSrc"></span>
+        </div>
+        <p class="qinst">次の（　　　）に入れるのに最も適切なものを1つ選んでください。</p>
+        <p class="qtext" id="qText"></p>
+        <ol class="choices" id="choices"></ol>
+        <div class="verdict" id="verdict" hidden aria-live="polite">
+          <p class="verdict__head">
+            <span class="verdict__mark" id="vMark"></span>
+            <span class="verdict__word" id="vWord"></span>
+            <span class="verdict__ans" id="vAns"></span>
+          </p>
+          <p class="verdict__exp" id="vExp"></p>
+          <button id="btnNext" class="btn btn--primary" type="button">次の問題へ</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="result" class="card result" hidden>
+    <p class="eyebrow">成績</p>
+    <p class="score"><span id="scoreNum">0</span><span class="unit">点</span><span class="of">／100点満点</span></p>
+    <p class="score__sub" id="scoreSub"></p>
+    <div class="stamp" id="stamp" aria-hidden="true"></div>
+    <p class="result__line" id="resultLine"></p>
+    <table class="cattable">
+      <thead><tr><th>品詞</th><th>出題</th><th>正解</th></tr></thead>
+      <tbody id="catBody"></tbody>
+    </table>
+    <p class="eyebrow" style="margin-top:1.2rem">今回の単語</p>
+    <ul class="words" id="words"></ul>
+    <ol class="review" id="review"></ol>
+    <button id="btnAgain" class="btn btn--primary" type="button">別の10問に挑戦する</button>
+  </section>
+
+  <footer class="foot">
+    <p>問題は英検準2級プラス（高校上級程度・2025年度新設）の大問1「短文の語句空所補充」の形式に合わせてAIが作成したオリジナル問題です。公式の過去問・サンプル問題の転載ではありません。</p>
+    <p>訳・解説もAIが作成しています。意味や用法は必ず辞書・教科書で確認してください。</p>
+  </footer>
+</div>
+
+<script>
+  const BANK = [{"id":"S01-01","src":"セット1 問1","cat":1,"q":"Jessica tried to (　　　) her parents to let her study abroad. However, they said she was too young to live alone.","c":["punish","predict","persuade","protect"],"a":2,"e":"正解は③ persuade「〜を説得する」。\n【訳】ジェシカは留学させてくれるよう両親を説得しようとした。しかし両親は、一人で暮らすには若すぎると言った。\n【手がかり】空所の後ろが her parents to let her ... なので「人に働きかけて〜させる」動詞が入る。2文目の However 以下で「説得はうまくいかなかった」流れになっている。\n【他の選択肢】① punish「罰する」② predict「予測する」④ protect「守る」。\n【覚え方】persuade A to do「Aを説得して〜させる」の形で丸ごと覚える。convince とほぼ同じ意味。名詞は persuasion「説得」。"},{"id":"S01-02","src":"セット1 問2","cat":1,"q":"Because of the heavy snow, the school decided to (　　　) the sports festival. It will be held next Saturday instead.","c":["postpone","attract","celebrate","describe"],"a":0,"e":"正解は① postpone「〜を延期する」。\n【訳】大雪のため、学校は体育祭を延期することにした。代わりに来週の土曜日に行われる。\n【手がかり】1文目の「大雪のため」と2文目の「代わりに来週の土曜日に」から、行事を先送りにしたと分かる。\n【他の選択肢】② attract「〜を引きつける」③ celebrate「〜を祝う」④ describe「〜を説明する」。\n【覚え方】post（後に）＋ pone（置く）＝後に置く→延期する。熟語の put off と同じ意味で、言い換え問題でもよく出る。"},{"id":"S01-03","src":"セット1 問3","cat":1,"q":"Ben was talking on the phone when his little brother kept (　　　) him. He asked his brother to wait until the call was over.","c":["rescuing","delivering","measuring","interrupting"],"a":3,"e":"正解は④ interrupting「〜の邪魔をする、〜を遮る」。\n【訳】ベンが電話で話していると、弟が何度も邪魔をしてきた。彼は弟に、電話が終わるまで待つように頼んだ。\n【手がかり】「電話中」「弟に wait してと頼んだ」の2点から、弟が話の邪魔をしていたと分かる。keep -ing は「〜し続ける」。\n【他の選択肢】① rescue「救助する」② deliver「配達する」③ measure「測る」。\n【覚え方】inter（間に）＋ rupt（破る）＝会話の間に割り込む。名詞は interruption「中断、妨害」。"},{"id":"S01-04","src":"セット1 問4","cat":1,"q":"The doctor told Kenji to (　　　) eating too much sugar. She said it would help him stay healthy.","c":["attach","avoid","announce","arrange"],"a":1,"e":"正解は② avoid「〜を避ける」。\n【訳】医者はケンジに、砂糖の取りすぎを避けるように言った。そうすれば健康でいられると彼女は言った。\n【手がかり】「砂糖の取りすぎ」＋「健康でいられる」から、控えるべきものだと分かる。\n【他の選択肢】① attach「〜を取り付ける」③ announce「〜を発表する」④ arrange「〜を手配する」。\n【覚え方】avoid の後ろは必ず動名詞（avoid doing）。avoid to do は誤り。同じく動名詞だけを取る enjoy / finish / mind / give up とまとめて覚える。"},{"id":"S01-05","src":"セット1 問5","cat":2,"q":"There is a (　　　) of nurses in many hospitals. The government is trying to hire more from other countries.","c":["ceremony","passenger","shortage","instrument"],"a":2,"e":"正解は③ shortage「不足」。\n【訳】多くの病院で看護師が不足している。政府は他の国からもっと多く雇おうとしている。\n【手がかり】2文目の「もっと雇おうとしている」から、足りていないと分かる。a shortage of 〜「〜の不足」の形。\n【他の選択肢】① ceremony「式典」② passenger「乗客」④ instrument「楽器、器具」。\n【覚え方】short「足りない」＋ -age（名詞化）。lack とほぼ同じ意味。反対は surplus「余剰」。"},{"id":"S01-06","src":"セット1 問6","cat":2,"q":"Working at the restaurant gave Emi the (　　　) to practice her English. Many of the customers there come from overseas.","c":["opportunity","emergency","expression","appearance"],"a":0,"e":"正解は① opportunity「機会」。\n【訳】レストランで働くことで、エミは英語を練習する機会を得た。そこの客の多くは海外から来ている。\n【手がかり】the (　) to practice「練習する〜」と続くので、to 不定詞を伴う名詞。「海外からの客が多い」＝英語を使う場面がある、という流れ。\n【他の選択肢】② emergency「緊急事態」③ expression「表現、表情」④ appearance「外見、出現」。\n【覚え方】the opportunity to do「〜する機会」。chance より少しかたい語。take the opportunity「機会を生かす」もセットで。"},{"id":"S01-07","src":"セット1 問7","cat":2,"q":"The restaurant has a good (　　　) for its fresh seafood. It is always crowded on weekends.","c":["decision","direction","permission","reputation"],"a":3,"e":"正解は④ reputation「評判」。\n【訳】そのレストランは新鮮な魚介で評判が良い。週末はいつも混んでいる。\n【手がかり】have a good (　) for 〜「〜で良い〜がある」＋「いつも混んでいる」から、評判の話だと分かる。\n【他の選択肢】① decision「決定」② direction「方向、指示」③ permission「許可」。\n【覚え方】have a reputation for 〜「〜で評判だ」。be known for 〜「〜で知られている」と言い換えられる。"},{"id":"S01-08","src":"セット1 問8","cat":3,"q":"Daniel's job at the ski resort is only (　　　). He will have to look for another one when spring comes.","c":["similar","temporary","ancient","nervous"],"a":1,"e":"正解は② temporary「一時的な」。\n【訳】ダニエルのスキー場での仕事は一時的なものにすぎない。春が来たら別の仕事を探さなければならないだろう。\n【手がかり】「スキー場」＋「春には別の仕事を探す」＝冬だけの仕事、と読み取る。\n【他の選択肢】① similar「似ている」③ ancient「古代の」④ nervous「緊張した」。\n【覚え方】反対語は permanent「永続的な」。temporary job「臨時の仕事」、temporarily「一時的に」も一緒に覚える。"},{"id":"S01-09","src":"セット1 問9","cat":3,"q":"A: Are tickets for Saturday's concert still (　　　)?\nB: Yes, but only a few are left, so you should buy them today.","c":["harmful","curious","available","accurate"],"a":2,"e":"正解は③ available「入手できる、利用できる」。\n【訳】A：土曜日のコンサートのチケットはまだ買えますか。B：はい、でも残りわずかなので、今日買った方がいいですよ。\n【手がかり】Bの「残りわずか」「今日買った方がいい」から、チケットがまだ手に入るかどうかを聞いていると分かる。\n【他の選択肢】① harmful「有害な」② curious「好奇心の強い」④ accurate「正確な」。\n【覚え方】物にも人にも使える。Is he available on Friday?「金曜日は空いていますか」のように、人の都合にも使う。反対は unavailable。"},{"id":"S01-10","src":"セット1 問10","cat":4,"q":"At first, Yuki could not swim at all. However, she (　　　) improved after taking lessons every week.","c":["rarely","gradually","exactly","nearly"],"a":1,"e":"正解は② gradually「徐々に、少しずつ」。\n【訳】最初、ユキは全く泳げなかった。しかし毎週レッスンを受けて、少しずつ上達した。\n【手がかり】At first 〜 However 〜 の対比で「最初はできなかった→上達した」。「毎週レッスン」から、時間をかけて変化したと分かる。\n【他の選択肢】① rarely「めったに〜ない」③ exactly「正確に、まさに」④ nearly「ほとんど」。\n【覚え方】形容詞 gradual「段階的な」の副詞形。grade（段階）が語源。slowly, little by little と同じ意味。"}];
+  const BUILD = "2026-09-12";
+  const CATS = { 1: "動詞", 2: "名詞", 3: "形容詞", 4: "副詞・前置詞", 5: "熟語" };
+  const N = 10;
+  const PASS = 70;
+  const NUM = ["①", "②", "③", "④"];
+  const LS_SEEN = "eiken_p2plus_seen";
+  const LS_HIST = "eiken_p2plus_hist";
+
+  const $ = (id) => document.getElementById(id);
+  const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function loadLS(key, def) { try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : def; } catch (e) { return def; } }
+  function saveLS(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {} }
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a;
+  }
+
+  // まだ出していない問題を優先して10問選ぶ
+  function pick() {
+    let seen = loadLS(LS_SEEN, []);
+    if (!Array.isArray(seen)) seen = [];
+    const seenSet = new Set(seen);
+    let chosen = shuffle(BANK.filter(q => !seenSet.has(q.id))).slice(0, N);
+    if (chosen.length < N) {
+      const rest = shuffle(BANK.filter(q => seenSet.has(q.id)));
+      chosen = chosen.concat(rest.slice(0, N - chosen.length));
+      seen = []; // 一巡したのでリセット
+    }
+    saveLS(LS_SEEN, seen.concat(chosen.map(q => q.id)));
+    return chosen;
+  }
+
+  let S = null; // { qs, i, ans: [{picked, ok}] }
+
+  function show(id) {
+    ["start", "quiz", "result"].forEach(s => { $(s).hidden = (s !== id); });
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  }
+
+  function renderStart() {
+    $("poolCount").textContent = BANK.length;
+    $("buildDate").textContent = BUILD || "—";
+    const counts = {};
+    BANK.forEach(q => { counts[q.cat] = (counts[q.cat] || 0) + 1; });
+    $("catList").innerHTML = Object.keys(CATS).filter(c => counts[c]).map(c =>
+      `<li><span>${CATS[c]}</span><span>${counts[c]}問</span></li>`).join("");
+    const hist = loadLS(LS_HIST, []);
+    if (Array.isArray(hist) && hist.length) {
+      const last = hist[hist.length - 1];
+      const best = Math.max(...hist.map(h => h.score));
+      $("lastScore").textContent = `前回 ${last.score}点（${last.correct}/${N}問）　自己ベスト ${best}点　挑戦 ${hist.length}回`;
+      $("lastScore").hidden = false;
+    }
+  }
+
+  function renderProgress() {
+    $("progress").innerHTML = Array.from({ length: N }, (_, k) => {
+      let cls = "";
+      if (k < S.i) cls = S.ans[k].ok ? "is-ok" : "is-ng";
+      else if (k === S.i) cls = "is-now";
+      return `<span class="${cls}"></span>`;
+    }).join("");
+  }
+
+  function renderQuestion() {
+    const q = S.qs[S.i];
+    renderProgress();
+    $("qNum").textContent = `第${S.i + 1}問`;
+    $("qCat").textContent = CATS[q.cat] || "";
+    $("qSrc").textContent = q.src || "";
+    $("qText").textContent = q.q;
+    $("choices").innerHTML = q.c.map((t, k) =>
+      `<li><button class="choice" type="button" data-k="${k}"><span class="choice__n">${NUM[k]}</span><span class="choice__t"></span><span class="choice__m"></span></button></li>`).join("");
+    $("choices").querySelectorAll(".choice__t").forEach((el, k) => { el.textContent = q.c[k]; });
+    $("choices").querySelectorAll(".choice").forEach(b => b.addEventListener("click", onAnswer));
+    $("verdict").hidden = true;
+    $("verdict").classList.remove("is-ok", "is-ng");
+    $("btnNext").textContent = (S.i === N - 1) ? "成績を見る" : "次の問題へ";
+  }
+
+  function onAnswer(ev) {
+    const k = Number(ev.currentTarget.dataset.k);
+    const q = S.qs[S.i];
+    const ok = (k === q.a);
+    S.ans[S.i] = { picked: k, ok };
+    $("choices").querySelectorAll(".choice").forEach((b, idx) => {
+      b.disabled = true;
+      if (idx === q.a) { b.classList.add("is-correct"); b.querySelector(".choice__m").textContent = "○"; }
+      else if (idx === k) { b.classList.add("is-wrong"); b.querySelector(".choice__m").textContent = "×"; }
+      else b.classList.add("is-dim");
+    });
+    const v = $("verdict");
+    v.classList.add(ok ? "is-ok" : "is-ng");
+    $("vMark").textContent = ok ? "○" : "×";
+    $("vWord").textContent = ok ? "正解" : "不正解";
+    $("vAns").textContent = ok ? `正解は ${NUM[q.a]} ${q.c[q.a]}` : `正解は ${NUM[q.a]} ${q.c[q.a]}（あなたの答え ${NUM[k]} ${q.c[k]}）`;
+    $("vExp").textContent = q.e;
+    v.hidden = false;
+    renderProgress();
+    setTimeout(() => v.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" }), 30);
+  }
+
+  function next() {
+    if (S.i < N - 1) { S.i++; renderQuestion(); window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" }); }
+    else finish();
+  }
+
+  function finish() {
+    const correct = S.ans.filter(a => a && a.ok).length;
+    const score = Math.round(correct * (100 / N));
+    const pass = score >= PASS;
+    $("scoreNum").textContent = score;
+    $("scoreSub").textContent = `${N}問中 ${correct}問正解`;
+    const st = $("stamp");
+    st.classList.toggle("is-ng", !pass);
+    st.innerHTML = pass ? `合格圏<small>${PASS}点以上</small>` : `要復習<small>${PASS}点未満</small>`;
+    $("resultLine").textContent = pass
+      ? `目安の${PASS}点を超えています。本番の大問1は17問を約10分で解くのが目安なので、意味が分かる単語は迷わず選べるまで繰り返しましょう。間違えた語は下の一覧で「他の選択肢」も含めて覚え直すと4語まとめて身につきます。`
+      : `目安の${PASS}点まであと${Math.ceil((PASS - score) / (100 / N))}問です。下の一覧で×の問題を開き、解説の「手がかり」（空所の前後・2文目のヒント）の読み方から確認しましょう。`;
+
+    const per = {};
+    S.qs.forEach((q, k) => {
+      per[q.cat] = per[q.cat] || { n: 0, ok: 0 };
+      per[q.cat].n++; if (S.ans[k].ok) per[q.cat].ok++;
+    });
+    $("catBody").innerHTML = Object.keys(CATS).filter(c => per[c]).map(c => {
+      const p = per[c]; const pct = Math.round(p.ok / p.n * 100);
+      return `<tr><td>${CATS[c]}</td><td>${p.n}問</td><td>${p.ok}問<span class="bar"><i style="width:${pct}%"></i></span></td></tr>`;
+    }).join("");
+
+    $("words").innerHTML = S.qs.map((q, k) => `<li class="${S.ans[k].ok ? "" : "ng"}">${esc(q.c[q.a])}</li>`).join("");
+
+    $("review").innerHTML = S.qs.map((q, k) => {
+      const a = S.ans[k];
+      return `<li><details>
+        <summary><span class="r__n">${k + 1}</span><span class="r__m ${a.ok ? "ok" : "ng"}">${a.ok ? "○" : "×"}</span><span class="r__t">${esc(q.c[q.a])}<small>${esc(q.src)}　${esc(CATS[q.cat] || "")}</small></span></summary>
+        <div class="r__body">
+          <p class="lab">問題</p><p class="en">${esc(q.q)}</p>
+          <p class="lab">選択肢</p>${q.c.map((t, i) => `<p class="en ${i === q.a ? "right" : (i === a.picked ? "yours" : "")}">${NUM[i]} ${esc(t)}</p>`).join("")}
+          <p class="lab">正解</p><p><span class="right">${NUM[q.a]} ${esc(q.c[q.a])}</span>${a.ok ? "" : `　あなたの答え <span class="yours">${NUM[a.picked]} ${esc(q.c[a.picked])}</span>`}</p>
+          <p class="lab">解説</p><p>${esc(q.e)}</p>
+        </div></details></li>`;
+    }).join("");
+
+    const hist = loadLS(LS_HIST, []);
+    const arr = Array.isArray(hist) ? hist : [];
+    arr.push({ t: Date.now(), score, correct });
+    saveLS(LS_HIST, arr.slice(-50));
+    show("result");
+  }
+
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+
+  function start() {
+    if (!BANK.length) return;
+    S = { qs: pick(), i: 0, ans: [] };
+    renderQuestion();
+    show("quiz");
+  }
+
+  $("btnStart").addEventListener("click", start);
+  $("btnAgain").addEventListener("click", () => { renderStart(); start(); });
+  $("btnNext").addEventListener("click", next);
+  renderStart();
+</script>
+<script>
+/* PWA: GitHub Pages上でのみ有効（file:// や claude.ai では何もしない）。
+   sw.js はネット優先・オフライン時キャッシュなので、pushすれば次回起動時に自動で新版になる */
+if ('serviceWorker' in navigator && location.protocol === 'https:' && /\.github\.io$/.test(location.hostname)) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
+</body>
+</html>

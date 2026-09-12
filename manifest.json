@@ -1,0 +1,16 @@
+{
+  "name": "英検準2級プラス 単語4択問題集",
+  "short_name": "英検準2級+",
+  "description": "英検準2級プラスの大問1形式で単語問題を10問ランダム出題。1問ごとに訳と解説、100点満点で採点。",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f1f5",
+  "theme_color": "#5c2d7a",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
